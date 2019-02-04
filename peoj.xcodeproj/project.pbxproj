@@ -16,6 +16,7 @@
 		2DEF63B121E4E6B200E8243C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */; };
 		2DEF63BC21E4E6B200E8243C /* peojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63BB21E4E6B200E8243C /* peojTests.m */; };
 		2DEF63C721E4E6B200E8243C /* peojUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63C621E4E6B200E8243C /* peojUITests.m */; };
+		919BF6099B1BB7EF8A1EE1F5 /* libPods-peoj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845DCEB45F824BC6D586AED /* libPods-peoj.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12F4035E1757D72A344EA091 /* libPods-peojTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peojTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B10E3EDE876F06BF8D7D648 /* libPods-peojUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peojUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF639B21E4E6B200E8243C /* peoj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peoj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF639F21E4E6B200E8243C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DEF63A121E4E6B200E8243C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +56,9 @@
 		2DEF63C221E4E6B200E8243C /* peojUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = peojUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF63C621E4E6B200E8243C /* peojUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = peojUITests.m; sourceTree = "<group>"; };
 		2DEF63C821E4E6B200E8243C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4845DCEB45F824BC6D586AED /* libPods-peoj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peoj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peoj.release.xcconfig"; path = "Pods/Target Support Files/Pods-peoj/Pods-peoj.release.xcconfig"; sourceTree = "<group>"; };
+		DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peoj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-peoj/Pods-peoj.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919BF6099B1BB7EF8A1EE1F5 /* libPods-peoj.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,8 @@
 				2DEF63BA21E4E6B200E8243C /* peojTests */,
 				2DEF63C521E4E6B200E8243C /* peojUITests */,
 				2DEF639C21E4E6B200E8243C /* Products */,
+				83A01B70F0DAFF056FE04149 /* Pods */,
+				B946106A3378B6377A87860C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +152,25 @@
 			path = peojUITests;
 			sourceTree = "<group>";
 		};
+		83A01B70F0DAFF056FE04149 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */,
+				4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B946106A3378B6377A87860C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4845DCEB45F824BC6D586AED /* libPods-peoj.a */,
+				12F4035E1757D72A344EA091 /* libPods-peojTests.a */,
+				1B10E3EDE876F06BF8D7D648 /* libPods-peojUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DEF63CB21E4E6B200E8243C /* Build configuration list for PBXNativeTarget "peoj" */;
 			buildPhases = (
+				56955F3C99D4C449920CFCEB /* [CP] Check Pods Manifest.lock */,
 				2DEF639721E4E6B200E8243C /* Sources */,
 				2DEF639821E4E6B200E8243C /* Frameworks */,
 				2DEF639921E4E6B200E8243C /* Resources */,
@@ -270,6 +299,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56955F3C99D4C449920CFCEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-peoj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DEF639721E4E6B200E8243C /* Sources */ = {
@@ -426,6 +480,7 @@
 		};
 		2DEF63CC21E4E6B200E8243C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = peoj/Info.plist;
@@ -437,6 +492,7 @@
 		};
 		2DEF63CD21E4E6B200E8243C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = peoj/Info.plist;

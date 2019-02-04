@@ -9,6 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+  //   MARK: Properties
+    
+    IBOutlet UILabel *nameTextField;
+    
+}
+//   MARK: Actions
+- (IBAction)setDefultLabelText:(id)sender;
+
+
 
 
 @end
