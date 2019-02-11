@@ -27,8 +27,5 @@
 
 
 
-- (IBAction)setDefultLabelText:(id)sender {
-    
-  
-}
+
 @end

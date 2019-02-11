@@ -15,8 +15,7 @@
     IBOutlet UILabel *nameTextField;
     
 }
-//   MARK: Actions
-- (IBAction)setDefultLabelText:(id)sender;
+
 
 
 
