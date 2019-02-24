@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B516122171A3A008EC797 /* SplashScreenViewController.m */; };
+		2D5B5165221725F4008EC797 /* SplashScreenViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B5164221725F4008EC797 /* SplashScreenViewController2.m */; };
 		2DEF63A021E4E6B200E8243C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF639F21E4E6B200E8243C /* main.m */; };
 		2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63A221E4E6B200E8243C /* AppDelegate.m */; };
 		2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63A521E4E6B200E8243C /* ViewController.m */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		12F4035E1757D72A344EA091 /* libPods-peojTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peojTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B10E3EDE876F06BF8D7D648 /* libPods-peojUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peojUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5B516022171A3A008EC797 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		2D5B516122171A3A008EC797 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
+		2D5B5163221725F4008EC797 /* SplashScreenViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController2.h; sourceTree = "<group>"; };
+		2D5B5164221725F4008EC797 /* SplashScreenViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController2.m; sourceTree = "<group>"; };
 		2DEF639B21E4E6B200E8243C /* peoj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peoj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF639F21E4E6B200E8243C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DEF63A121E4E6B200E8243C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 		2DEF639221E4E6B200E8243C = {
 			isa = PBXGroup;
 			children = (
+				2D5B5163221725F4008EC797 /* SplashScreenViewController2.h */,
+				2D5B5164221725F4008EC797 /* SplashScreenViewController2.m */,
 				2DEF639D21E4E6B200E8243C /* peoj */,
 				2DEF63BA21E4E6B200E8243C /* peojTests */,
 				2DEF63C521E4E6B200E8243C /* peojUITests */,
@@ -122,6 +130,8 @@
 				2DEF63B221E4E6B200E8243C /* Info.plist */,
 				2DEF63AA21E4E6B200E8243C /* peoj.xcdatamodeld */,
 				2DEF639E21E4E6B200E8243C /* Supporting Files */,
+				2D5B516022171A3A008EC797 /* SplashScreenViewController.h */,
+				2D5B516122171A3A008EC797 /* SplashScreenViewController.m */,
 			);
 			path = peoj;
 			sourceTree = "<group>";
@@ -306,15 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-peoj-checkManifestLockResult.txt",
 			);
@@ -332,6 +338,8 @@
 			files = (
 				2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */,
 				2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */,
+				2D5B5165221725F4008EC797 /* SplashScreenViewController2.m in Sources */,
+				2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */,
 				2DEF63A021E4E6B200E8243C /* main.m in Sources */,
 				2DEF63AC21E4E6B200E8243C /* peoj.xcdatamodeld in Sources */,
 			);
@@ -567,6 +575,7 @@
 				2DEF63CD21E4E6B200E8243C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DEF63CE21E4E6B200E8243C /* Build configuration list for PBXNativeTarget "peojTests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +584,7 @@
 				2DEF63D021E4E6B200E8243C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DEF63D121E4E6B200E8243C /* Build configuration list for PBXNativeTarget "peojUITests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +593,7 @@
 				2DEF63D321E4E6B200E8243C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

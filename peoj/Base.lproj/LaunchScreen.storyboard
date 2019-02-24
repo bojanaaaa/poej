@@ -22,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdW-MG-C1w">
-                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.37243701114221633" green="0.72336632013320923" blue="0.13418113230023213" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Tracker" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdx-2i-iV9">
-                                <rect key="frame" x="50.5" y="304" width="274.5" height="58"/>
+                                <rect key="frame" x="50.5" y="304.5" width="274.5" height="58"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="46"/>
                                 <color key="textColor" red="0.0014197396128944884" green="0.5" blue="0.0022028552773147303" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0014197396130000001" green="0.5" blue="0.0022028552769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -35,14 +35,16 @@
                                 <size key="shadowOffset" width="4" height="-4"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AdW-MG-C1w" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="R8o-jl-kUL"/>
+                            <constraint firstItem="AdW-MG-C1w" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rmq-tw-Q0r"/>
                             <constraint firstItem="AdW-MG-C1w" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UBU-0W-Oml"/>
                             <constraint firstItem="zdx-2i-iV9" firstAttribute="centerX" secondItem="AdW-MG-C1w" secondAttribute="centerX" id="ZJ2-cf-pk6"/>
                             <constraint firstItem="AdW-MG-C1w" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bR4-o4-6BQ"/>
                             <constraint firstItem="zdx-2i-iV9" firstAttribute="centerY" secondItem="AdW-MG-C1w" secondAttribute="centerY" id="cBY-aX-7fa"/>
                             <constraint firstItem="AdW-MG-C1w" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="hTJ-wu-Ark"/>
+                            <constraint firstItem="AdW-MG-C1w" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="vaA-28-uMq"/>
                         </constraints>
                     </view>
                 </viewController>
