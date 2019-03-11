@@ -116,5 +116,4 @@
     //stavljamo nas navigation controller da bude root, i od tada mozemo da kontrolisemo ekrane preko njega
     [self.window setRootViewController:navVC];
 }
-
 @end

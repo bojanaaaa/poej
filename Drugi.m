@@ -1,24 +1,23 @@
 //
-//  SplashScreenViewController2.m
+//  Drugi.m
 //  peoj
 //
-//  Created by crazy on 2/15/19.
+//  Created by crazy on 3/11/19.
 //  Copyright © 2019 crazy. All rights reserved.
 //
 
-#import "SplashScreenViewController2.h"
+#import "Drugi.h"
 
-@interface SplashScreenViewController2 ()
+@interface Drugi ()
 
 @end
 
-@implementation SplashScreenViewController2
+@implementation Drugi
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    }
+    NSLog(@"Ovo je drugi view controller");}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

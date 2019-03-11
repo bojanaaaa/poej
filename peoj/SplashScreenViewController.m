@@ -19,11 +19,19 @@
     // Do any additional setup after loading the view.
     
     //instanciramo app delegate, da mozem oda pristupimo njegovim funkcijama
-    AppDelegate *applicationDelegate = [[UIApplication sharedApplication] delegate];
+    
+    //Ovo mi je prikazivalo gresku:AppDelegate *applicationDelegate = [[UIApplication sharedApplication] delegate] sada  ovako ne prikazuje tu gresku:
+    
+    
+    AppDelegate *applicationDelegate;
+    applicationDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    
+    
+    
     //pozivamo funkciju app delegate koja ce da prikaze nas pocetni ekran
     //ako ti se ne prikaze ova funkcija, moras je dodati u .h fajl
     [applicationDelegate openAppHome];
-    
    }
 
 - (void)didReceiveMemoryWarning {
