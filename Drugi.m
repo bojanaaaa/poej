@@ -33,7 +33,9 @@
 
 
 -(void)textFieldDidChange:(UITextField *)textField {
+    labela.text=text.text;
 }
+
 /*
 #pragma mark - Navigation
 

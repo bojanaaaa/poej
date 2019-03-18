@@ -14,4 +14,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *labela;
 @property (strong, nonatomic) IBOutlet UITextField *text;
 
+
 @end
