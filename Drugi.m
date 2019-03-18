@@ -42,8 +42,11 @@
 
 
 -(void)textFieldDidChange:(UITextField *)textField {
-    labela2.text=text1.text;
-   labela1.text=text2.text;}
+    if(textField==text1)
+    { labela2.text=textField.text;
+}
+    else
+   labela1.text=textField.text;}
 
 
 /*
