@@ -10,9 +10,14 @@
 
 @interface Drugi : UIViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *text1;
 
-@property (strong, nonatomic) IBOutlet UILabel *labela;
-@property (strong, nonatomic) IBOutlet UITextField *text;
+@property (strong, nonatomic) IBOutlet UITextField *text2;
+
+@property (strong, nonatomic) IBOutlet UILabel *labela1;
+
+@property (strong, nonatomic) IBOutlet UILabel *labela2;
+
 
 
 @end

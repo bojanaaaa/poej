@@ -13,18 +13,27 @@
 @end
 
 @implementation Drugi
-@synthesize labela, text;
+@synthesize labela1, labela2,text1,text2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Ovo je drugi view controller");
 
     
-    text.delegate = self;
+    text1.delegate = self;
     
-    [text addTarget:self
-                     action:@selector(textFieldDidChange:)
-           forControlEvents:UIControlEventEditingChanged];}
+    [text1 addTarget:self
+              action:@selector(textFieldDidChange:)
+    forControlEvents:UIControlEventEditingChanged];
+    
+    text2.delegate = self;
+   
+    [text2 addTarget:self
+              action:@selector(textFieldDidChange:)
+    forControlEvents:UIControlEventEditingChanged];
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -33,8 +42,9 @@
 
 
 -(void)textFieldDidChange:(UITextField *)textField {
-    labela.text=text.text;
-}
+    labela2.text=text1.text;
+   labela1.text=text2.text;}
+
 
 /*
 #pragma mark - Navigation
