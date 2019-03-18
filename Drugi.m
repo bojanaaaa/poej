@@ -13,17 +13,27 @@
 @end
 
 @implementation Drugi
-
+@synthesize labela, text;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSLog(@"Ovo je drugi view controller");}
+    NSLog(@"Ovo je drugi view controller");
+
+    
+    text.delegate = self;
+    
+    [text addTarget:self
+                     action:@selector(textFieldDidChange:)
+           forControlEvents:UIControlEventEditingChanged];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)textFieldDidChange:(UITextField *)textField {
+}
 /*
 #pragma mark - Navigation
 

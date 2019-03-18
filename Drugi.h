@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Drugi : UIViewController
+@interface Drugi : UIViewController <UITextFieldDelegate>
+
+
+@property (strong, nonatomic) IBOutlet UILabel *labela;
+@property (strong, nonatomic) IBOutlet UITextField *text;
 
 @end
