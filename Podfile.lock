@@ -1,4 +1,10 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
   - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -6,6 +12,8 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - MGEvents (1.2.1)
   - SGHTTPRequest (1.9.0):
     - AFNetworking/NSURLSession (~> 3.0)
@@ -24,6 +32,7 @@ PODS:
     - SGHTTPRequest/Core
 
 DEPENDENCIES:
+  - AFNetworking
   - SGHTTPRequest
 
 SPEC REPOS:
@@ -37,6 +46,6 @@ SPEC CHECKSUMS:
   MGEvents: 989c1396082a25e760f03056bdc0af1b6c439c78
   SGHTTPRequest: 93646208528eafd758052a92ee4dcf04e0d263c5
 
-PODFILE CHECKSUM: 8edf3554b44e3c5351d1808aa927ae2dddae013c
+PODFILE CHECKSUM: b505668bc3575a1ce34a1b6f95847b5c3168c950
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

@@ -13,10 +13,32 @@
 @end
 
 @implementation AppDelegate
-
+//@synthesize navigationController, drugi;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+   /* self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    //create the navigation controller and add to the view
+    navigationController = [[UINavigationController alloc] init];
+    [self.window addSubview:[self.navigationController view]];
+    
+    //check if the first viewcontroller eixsts, otherwise create it
+    if(self.drugi == nil)
+    {
+        Drugi *firstView = [[Drugi alloc] init];
+        self.drugi = firstView;
+    }
+    
+    //push the first viewcontroller into the navigation viewcontroller stack
+    [self.navigationController pushViewController:self.drugi animated:YES];
+    
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    // Override point for customization after application launch.
+    */
     return YES;
 }
 

@@ -8,5 +8,6 @@ target 'peoj' do
   # Pods for peoj
 
   pod'SGHTTPRequest'
+  pod'AFNetworking'
   
 end

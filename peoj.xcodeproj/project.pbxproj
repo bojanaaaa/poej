@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B516122171A3A008EC797 /* SplashScreenViewController.m */; };
-		2D5B516B2236AAB4008EC797 /* Drugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5B516A2236AAB4008EC797 /* Drugi.m */; };
 		2DEF63A021E4E6B200E8243C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF639F21E4E6B200E8243C /* main.m */; };
 		2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63A221E4E6B200E8243C /* AppDelegate.m */; };
 		2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63A521E4E6B200E8243C /* ViewController.m */; };
@@ -18,6 +17,14 @@
 		2DEF63B121E4E6B200E8243C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */; };
 		2DEF63BC21E4E6B200E8243C /* peojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63BB21E4E6B200E8243C /* peojTests.m */; };
 		2DEF63C721E4E6B200E8243C /* peojUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63C621E4E6B200E8243C /* peojUITests.m */; };
+		3F64E8962269F4F300A89DF4 /* Remembered.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E8952269F4F300A89DF4 /* Remembered.m */; };
+		3F64E8992269F62A00A89DF4 /* RememberedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E8982269F62A00A89DF4 /* RememberedArray.m */; };
+		3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E89A2269F86100A89DF4 /* Drugi.m */; };
+		3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C30226F177200C5239C /* CommentTableViewCell.m */; };
+		3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */; };
+		3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB4282226DAA58000D4791 /* Cetvrti.m */; };
+		3FECC9D42267307F003921DF /* TreciViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC9D32267307F003921DF /* TreciViewController.m */; };
+		3FFD5E5D226893F4004AC002 /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5E5C226893F4004AC002 /* Comments.m */; };
 		919BF6099B1BB7EF8A1EE1F5 /* libPods-peoj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845DCEB45F824BC6D586AED /* libPods-peoj.a */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +51,6 @@
 		2D5B516022171A3A008EC797 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		2D5B516122171A3A008EC797 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		2D5B51692236AAB4008EC797 /* Drugi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drugi.h; sourceTree = "<group>"; };
-		2D5B516A2236AAB4008EC797 /* Drugi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drugi.m; sourceTree = "<group>"; };
 		2DEF639B21E4E6B200E8243C /* peoj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peoj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF639F21E4E6B200E8243C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DEF63A121E4E6B200E8243C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +68,22 @@
 		2DEF63C221E4E6B200E8243C /* peojUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = peojUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF63C621E4E6B200E8243C /* peojUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = peojUITests.m; sourceTree = "<group>"; };
 		2DEF63C821E4E6B200E8243C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F64E8942269F4F300A89DF4 /* Remembered.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Remembered.h; sourceTree = "<group>"; };
+		3F64E8952269F4F300A89DF4 /* Remembered.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Remembered.m; sourceTree = "<group>"; };
+		3F64E8972269F62A00A89DF4 /* RememberedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RememberedArray.h; sourceTree = "<group>"; };
+		3F64E8982269F62A00A89DF4 /* RememberedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RememberedArray.m; sourceTree = "<group>"; };
+		3F64E89A2269F86100A89DF4 /* Drugi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drugi.m; sourceTree = "<group>"; };
+		3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		3F6C8C30226F177200C5239C /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		3FAD6DD622686CCA00C21C14 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3FAD6DD72268710C00C21C14 /* Konstante.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Konstante.h; sourceTree = "<group>"; };
+		3FBB4281226DAA58000D4791 /* Cetvrti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cetvrti.h; sourceTree = "<group>"; };
+		3FBB4282226DAA58000D4791 /* Cetvrti.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cetvrti.m; sourceTree = "<group>"; };
+		3FECC9D22267307F003921DF /* TreciViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreciViewController.h; sourceTree = "<group>"; };
+		3FECC9D32267307F003921DF /* TreciViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreciViewController.m; sourceTree = "<group>"; };
+		3FFD5E5B226893F4004AC002 /* Comments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comments.h; sourceTree = "<group>"; };
+		3FFD5E5C226893F4004AC002 /* Comments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Comments.m; sourceTree = "<group>"; };
 		4845DCEB45F824BC6D586AED /* libPods-peoj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-peoj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peoj.release.xcconfig"; path = "Pods/Target Support Files/Pods-peoj/Pods-peoj.release.xcconfig"; sourceTree = "<group>"; };
 		DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-peoj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-peoj/Pods-peoj.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,8 +118,12 @@
 		2DEF639221E4E6B200E8243C = {
 			isa = PBXGroup;
 			children = (
+				3FECC9D22267307F003921DF /* TreciViewController.h */,
+				3FECC9D32267307F003921DF /* TreciViewController.m */,
 				2D5B51692236AAB4008EC797 /* Drugi.h */,
-				2D5B516A2236AAB4008EC797 /* Drugi.m */,
+				3F64E89A2269F86100A89DF4 /* Drugi.m */,
+				3FBB4282226DAA58000D4791 /* Cetvrti.m */,
+				3FBB4281226DAA58000D4791 /* Cetvrti.h */,
 				2DEF639D21E4E6B200E8243C /* peoj */,
 				2DEF63BA21E4E6B200E8243C /* peojTests */,
 				2DEF63C521E4E6B200E8243C /* peojUITests */,
@@ -120,10 +146,19 @@
 		2DEF639D21E4E6B200E8243C /* peoj */ = {
 			isa = PBXGroup;
 			children = (
+				3F6C8C2E226F173500C5239C /* Comment Table View Cell */,
 				2DEF63A121E4E6B200E8243C /* AppDelegate.h */,
+				3FAD6DD622686CCA00C21C14 /* PrefixHeader.pch */,
+				3FAD6DD72268710C00C21C14 /* Konstante.h */,
 				2DEF63A221E4E6B200E8243C /* AppDelegate.m */,
 				2DEF63A421E4E6B200E8243C /* ViewController.h */,
 				2DEF63A521E4E6B200E8243C /* ViewController.m */,
+				3FFD5E5B226893F4004AC002 /* Comments.h */,
+				3FFD5E5C226893F4004AC002 /* Comments.m */,
+				3F64E8942269F4F300A89DF4 /* Remembered.h */,
+				3F64E8952269F4F300A89DF4 /* Remembered.m */,
+				3F64E8972269F62A00A89DF4 /* RememberedArray.h */,
+				3F64E8982269F62A00A89DF4 /* RememberedArray.m */,
 				2DEF63A721E4E6B200E8243C /* Main.storyboard */,
 				2DEF63AD21E4E6B200E8243C /* Assets.xcassets */,
 				2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */,
@@ -160,6 +195,16 @@
 				2DEF63C821E4E6B200E8243C /* Info.plist */,
 			);
 			path = peojUITests;
+			sourceTree = "<group>";
+		};
+		3F6C8C2E226F173500C5239C /* Comment Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */,
+				3F6C8C30226F177200C5239C /* CommentTableViewCell.m */,
+				3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */,
+			);
+			name = "Comment Table View Cell";
 			sourceTree = "<group>";
 		};
 		83A01B70F0DAFF056FE04149 /* Pods */ = {
@@ -244,12 +289,12 @@
 		2DEF639321E4E6B200E8243C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = crazy;
 				TargetAttributes = {
 					2DEF639A21E4E6B200E8243C = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2DEF63B621E4E6B200E8243C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -265,7 +310,7 @@
 			};
 			buildConfigurationList = 2DEF639621E4E6B200E8243C /* Build configuration list for PBXProject "peoj" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -291,6 +336,7 @@
 				2DEF63B121E4E6B200E8243C /* LaunchScreen.storyboard in Resources */,
 				2DEF63AE21E4E6B200E8243C /* Assets.xcassets in Resources */,
 				2DEF63A921E4E6B200E8243C /* Main.storyboard in Resources */,
+				3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +384,14 @@
 			files = (
 				2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */,
 				2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */,
+				3F64E8962269F4F300A89DF4 /* Remembered.m in Sources */,
+				3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */,
 				2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */,
-				2D5B516B2236AAB4008EC797 /* Drugi.m in Sources */,
+				3FFD5E5D226893F4004AC002 /* Comments.m in Sources */,
+				3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */,
+				3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */,
+				3FECC9D42267307F003921DF /* TreciViewController.m in Sources */,
+				3F64E8992269F62A00A89DF4 /* RememberedArray.m in Sources */,
 				2DEF63A021E4E6B200E8243C /* main.m in Sources */,
 				2DEF63AC21E4E6B200E8243C /* peoj.xcdatamodeld in Sources */,
 			);
@@ -400,21 +452,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -427,6 +488,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = peoj/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -448,21 +510,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -473,6 +544,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = peoj/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -491,10 +563,13 @@
 			baseConfigurationReference = DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = peoj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.peoj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -503,10 +578,13 @@
 			baseConfigurationReference = 4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = peoj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.peoj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

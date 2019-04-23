@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Drugi.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 
 @property (strong, nonatomic) UIWindow *window;
+
+//@property (nonatomic, retain) UINavigationController *navigationController;
+//@property (nonatomic, retain) Drugi * drugi;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
