@@ -10,6 +10,7 @@
 #import "Drugi.h"
 #import "Cetvrti.h"
 #import "Comments.h"
+#import "CommentTableViewCell.h"
 @interface TreciViewController ()
 
 
@@ -18,15 +19,14 @@
 
 
 @implementation TreciViewController
-@synthesize nameLabel,data,tableView;
+@synthesize nameLabel,tableView,commentsArray,user;
 - (void)viewDidLoad {
     [super viewDidLoad];
    
     tableView.delegate=self;
     tableView.dataSource=self;
-    
-    NSLog(@"%@",data.body);
-    nameLabel.text=data.name;
+  
+    nameLabel.text=user.email;
    
     
 }
@@ -44,7 +44,7 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Cetvrti *cartController = [sb instantiateViewControllerWithIdentifier:@"Cetvrti"];
-    cartController.data = data;
+    
     [self.navigationController pushViewController:cartController animated:YES];
     
 }
@@ -54,9 +54,47 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+    [tableView registerNib:[UINib nibWithNibName:@"CommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommentTableViewCell"];
+    CommentTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell"];
     
+    
+    Comments *comment=[commentsArray objectAtIndex:indexPath.row];
+    
+    cell.nameLabel.text=comment.name;
+    cell.emailLabel.text=comment.email;
+    
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return 1;
+    
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return [commentsArray count];
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 120;
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    Comments *commentAtSelectedRow=[commentsArray objectAtIndex:indexPath.row];
+    
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    Cetvrti *cartController = [sb instantiateViewControllerWithIdentifier:@"Cetvrti"];
+    cartController.data = commentAtSelectedRow;
+    [self.navigationController pushViewController:cartController animated:YES];
+    
+}
 
 @end

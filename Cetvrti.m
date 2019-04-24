@@ -13,17 +13,16 @@
 @end
 
 @implementation Cetvrti
-@synthesize data,bodyTEXT,name,email2;
+@synthesize data,body,name,email2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     name.text=data.name;
     email2.text=data.email;
-    bodyTEXT.text=data.body;
+    body.text=data.body;
     
     // Do any additional setup after loading the view.
 }
-
 /*
 #pragma mark - Navigation
 

@@ -17,8 +17,7 @@
 		2DEF63B121E4E6B200E8243C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */; };
 		2DEF63BC21E4E6B200E8243C /* peojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63BB21E4E6B200E8243C /* peojTests.m */; };
 		2DEF63C721E4E6B200E8243C /* peojUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63C621E4E6B200E8243C /* peojUITests.m */; };
-		3F64E8962269F4F300A89DF4 /* Remembered.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E8952269F4F300A89DF4 /* Remembered.m */; };
-		3F64E8992269F62A00A89DF4 /* RememberedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E8982269F62A00A89DF4 /* RememberedArray.m */; };
+		3F01CAC82270527000FF6012 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F01CAC72270527000FF6012 /* User.m */; };
 		3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E89A2269F86100A89DF4 /* Drugi.m */; };
 		3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C30226F177200C5239C /* CommentTableViewCell.m */; };
 		3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */; };
@@ -68,10 +67,8 @@
 		2DEF63C221E4E6B200E8243C /* peojUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = peojUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEF63C621E4E6B200E8243C /* peojUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = peojUITests.m; sourceTree = "<group>"; };
 		2DEF63C821E4E6B200E8243C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F64E8942269F4F300A89DF4 /* Remembered.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Remembered.h; sourceTree = "<group>"; };
-		3F64E8952269F4F300A89DF4 /* Remembered.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Remembered.m; sourceTree = "<group>"; };
-		3F64E8972269F62A00A89DF4 /* RememberedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RememberedArray.h; sourceTree = "<group>"; };
-		3F64E8982269F62A00A89DF4 /* RememberedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RememberedArray.m; sourceTree = "<group>"; };
+		3F01CAC62270527000FF6012 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		3F01CAC72270527000FF6012 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3F64E89A2269F86100A89DF4 /* Drugi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drugi.m; sourceTree = "<group>"; };
 		3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		3F6C8C30226F177200C5239C /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
@@ -124,6 +121,8 @@
 				3F64E89A2269F86100A89DF4 /* Drugi.m */,
 				3FBB4282226DAA58000D4791 /* Cetvrti.m */,
 				3FBB4281226DAA58000D4791 /* Cetvrti.h */,
+				2D5B516122171A3A008EC797 /* SplashScreenViewController.m */,
+				2D5B516022171A3A008EC797 /* SplashScreenViewController.h */,
 				2DEF639D21E4E6B200E8243C /* peoj */,
 				2DEF63BA21E4E6B200E8243C /* peojTests */,
 				2DEF63C521E4E6B200E8243C /* peojUITests */,
@@ -148,25 +147,16 @@
 			children = (
 				3F6C8C2E226F173500C5239C /* Comment Table View Cell */,
 				2DEF63A121E4E6B200E8243C /* AppDelegate.h */,
-				3FAD6DD622686CCA00C21C14 /* PrefixHeader.pch */,
-				3FAD6DD72268710C00C21C14 /* Konstante.h */,
 				2DEF63A221E4E6B200E8243C /* AppDelegate.m */,
 				2DEF63A421E4E6B200E8243C /* ViewController.h */,
 				2DEF63A521E4E6B200E8243C /* ViewController.m */,
-				3FFD5E5B226893F4004AC002 /* Comments.h */,
-				3FFD5E5C226893F4004AC002 /* Comments.m */,
-				3F64E8942269F4F300A89DF4 /* Remembered.h */,
-				3F64E8952269F4F300A89DF4 /* Remembered.m */,
-				3F64E8972269F62A00A89DF4 /* RememberedArray.h */,
-				3F64E8982269F62A00A89DF4 /* RememberedArray.m */,
+				3F01CAC22270516F00FF6012 /* some */,
 				2DEF63A721E4E6B200E8243C /* Main.storyboard */,
 				2DEF63AD21E4E6B200E8243C /* Assets.xcassets */,
 				2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */,
 				2DEF63B221E4E6B200E8243C /* Info.plist */,
 				2DEF63AA21E4E6B200E8243C /* peoj.xcdatamodeld */,
 				2DEF639E21E4E6B200E8243C /* Supporting Files */,
-				2D5B516022171A3A008EC797 /* SplashScreenViewController.h */,
-				2D5B516122171A3A008EC797 /* SplashScreenViewController.m */,
 			);
 			path = peoj;
 			sourceTree = "<group>";
@@ -195,6 +185,19 @@
 				2DEF63C821E4E6B200E8243C /* Info.plist */,
 			);
 			path = peojUITests;
+			sourceTree = "<group>";
+		};
+		3F01CAC22270516F00FF6012 /* some */ = {
+			isa = PBXGroup;
+			children = (
+				3FFD5E5B226893F4004AC002 /* Comments.h */,
+				3FFD5E5C226893F4004AC002 /* Comments.m */,
+				3F01CAC62270527000FF6012 /* User.h */,
+				3F01CAC72270527000FF6012 /* User.m */,
+				3FAD6DD622686CCA00C21C14 /* PrefixHeader.pch */,
+				3FAD6DD72268710C00C21C14 /* Konstante.h */,
+			);
+			name = some;
 			sourceTree = "<group>";
 		};
 		3F6C8C2E226F173500C5239C /* Comment Table View Cell */ = {
@@ -294,7 +297,7 @@
 				TargetAttributes = {
 					2DEF639A21E4E6B200E8243C = {
 						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					2DEF63B621E4E6B200E8243C = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -384,14 +387,13 @@
 			files = (
 				2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */,
 				2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */,
-				3F64E8962269F4F300A89DF4 /* Remembered.m in Sources */,
 				3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */,
 				2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */,
 				3FFD5E5D226893F4004AC002 /* Comments.m in Sources */,
 				3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */,
+				3F01CAC82270527000FF6012 /* User.m in Sources */,
 				3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */,
 				3FECC9D42267307F003921DF /* TreciViewController.m in Sources */,
-				3F64E8992269F62A00A89DF4 /* RememberedArray.m in Sources */,
 				2DEF63A021E4E6B200E8243C /* main.m in Sources */,
 				2DEF63AC21E4E6B200E8243C /* peoj.xcdatamodeld in Sources */,
 			);
@@ -563,7 +565,8 @@
 			baseConfigurationReference = DD1E99903A9CDA24C59986E0 /* Pods-peoj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = peoj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -578,7 +581,8 @@
 			baseConfigurationReference = 4AF66EBCD2801B39CC16F38E /* Pods-peoj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = peoj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

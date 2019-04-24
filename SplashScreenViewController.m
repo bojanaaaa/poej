@@ -7,6 +7,12 @@
 //
 
 #import "SplashScreenViewController.h"
+#import "Drugi.h"
+#import "TreciViewController.h"
+#import "AFNetworking.h"
+#import "Comments.h"
+#import "User.h"
+
 
 @interface SplashScreenViewController ()
 
@@ -16,6 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ 
+    
     // Do any additional setup after loading the view.
     
     //instanciramo app delegate, da mozem oda pristupimo njegovim funkcijama

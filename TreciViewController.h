@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Comments.h"
+#import "User.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TreciViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
@@ -21,7 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
-@property (weak, nonatomic) Comments *data;
+@property (weak, nonatomic) User *user;
+@property(strong, nonatomic) NSArray *commentsArray;
 @end
 
 

@@ -18,9 +18,6 @@
 @interface Drugi : UIViewController <UITextFieldDelegate>
 
 
-//@property (nonatomic, retain) TreciViewController *treci;
-//@property Comments *data;
-//@property UILabel *name;
 
 
 @property (strong, nonatomic) IBOutlet UITextField *text1;
@@ -33,8 +30,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *labela3;
 
-
 @property (strong, nonatomic) IBOutlet UILabel *labela2;
+
+@property(strong,nonatomic) NSMutableArray *users;
 
 - (IBAction)action:(id)sender;
 
