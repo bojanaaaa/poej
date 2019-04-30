@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsManager : NSObject
 
++ (NewsManager *)sharedManager;
+@property (strong,nonatomic) NSMutableArray *commentsArray;
+
+-(void) initManager;
 @end
 
 NS_ASSUME_NONNULL_END

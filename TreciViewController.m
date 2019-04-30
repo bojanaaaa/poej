@@ -11,6 +11,7 @@
 #import "Cetvrti.h"
 #import "Comments.h"
 #import "CommentTableViewCell.h"
+
 @interface TreciViewController ()
 
 
@@ -27,8 +28,10 @@
     tableView.dataSource=self;
   
     nameLabel.text=user.email;
-   
     
+    commentsArray=[NewsManager sharedManager].commentsArray;
+    
+   
 }
 
 
@@ -88,7 +91,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     Comments *commentAtSelectedRow=[commentsArray objectAtIndex:indexPath.row];
-    
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Cetvrti *cartController = [sb instantiateViewControllerWithIdentifier:@"Cetvrti"];

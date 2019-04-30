@@ -10,7 +10,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GetRegistred : UIViewController
+@interface GetRegistred : UIViewController <UITextFieldDelegate,UIScrollViewDelegate> 
+
+@property (strong, nonatomic) IBOutlet UILabel *newsAppLabel;
+
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField *passwordTextFiled;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottom;
+
+- (IBAction)registerButton:(id)sender;
+
+
+- (IBAction)logInButton:(id)sender;
+
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
 
 @end
 

@@ -18,9 +18,12 @@
 		2DEF63BC21E4E6B200E8243C /* peojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63BB21E4E6B200E8243C /* peojTests.m */; };
 		2DEF63C721E4E6B200E8243C /* peojUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63C621E4E6B200E8243C /* peojUITests.m */; };
 		3F01CAC82270527000FF6012 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F01CAC72270527000FF6012 /* User.m */; };
+		3F626BF02271DECF00A1B9C1 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F626BEF2271DECF00A1B9C1 /* UserManager.m */; };
 		3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E89A2269F86100A89DF4 /* Drugi.m */; };
+		3F68AFA4227835B3006A93F3 /* GetRegistred.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68AFA3227835B3006A93F3 /* GetRegistred.m */; };
 		3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C8C30226F177200C5239C /* CommentTableViewCell.m */; };
 		3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */; };
+		3FA43CD82271ACF100107E87 /* NewsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA43CD72271ACF100107E87 /* NewsManager.m */; };
 		3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB4282226DAA58000D4791 /* Cetvrti.m */; };
 		3FECC9D42267307F003921DF /* TreciViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC9D32267307F003921DF /* TreciViewController.m */; };
 		3FFD5E5D226893F4004AC002 /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5E5C226893F4004AC002 /* Comments.m */; };
@@ -69,10 +72,16 @@
 		2DEF63C821E4E6B200E8243C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F01CAC62270527000FF6012 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3F01CAC72270527000FF6012 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3F626BEE2271DECF00A1B9C1 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		3F626BEF2271DECF00A1B9C1 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		3F64E89A2269F86100A89DF4 /* Drugi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drugi.m; sourceTree = "<group>"; };
+		3F68AFA2227835B3006A93F3 /* GetRegistred.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetRegistred.h; sourceTree = "<group>"; };
+		3F68AFA3227835B3006A93F3 /* GetRegistred.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetRegistred.m; sourceTree = "<group>"; };
 		3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
 		3F6C8C30226F177200C5239C /* CommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 		3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		3FA43CD62271ACF100107E87 /* NewsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsManager.h; sourceTree = "<group>"; };
+		3FA43CD72271ACF100107E87 /* NewsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsManager.m; sourceTree = "<group>"; };
 		3FAD6DD622686CCA00C21C14 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3FAD6DD72268710C00C21C14 /* Konstante.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Konstante.h; sourceTree = "<group>"; };
 		3FBB4281226DAA58000D4791 /* Cetvrti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cetvrti.h; sourceTree = "<group>"; };
@@ -145,6 +154,7 @@
 		2DEF639D21E4E6B200E8243C /* peoj */ = {
 			isa = PBXGroup;
 			children = (
+				3FA43CD52271ACC500107E87 /* Managers */,
 				3F6C8C2E226F173500C5239C /* Comment Table View Cell */,
 				2DEF63A121E4E6B200E8243C /* AppDelegate.h */,
 				2DEF63A221E4E6B200E8243C /* AppDelegate.m */,
@@ -152,6 +162,8 @@
 				2DEF63A521E4E6B200E8243C /* ViewController.m */,
 				3F01CAC22270516F00FF6012 /* some */,
 				2DEF63A721E4E6B200E8243C /* Main.storyboard */,
+				3F68AFA2227835B3006A93F3 /* GetRegistred.h */,
+				3F68AFA3227835B3006A93F3 /* GetRegistred.m */,
 				2DEF63AD21E4E6B200E8243C /* Assets.xcassets */,
 				2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */,
 				2DEF63B221E4E6B200E8243C /* Info.plist */,
@@ -208,6 +220,17 @@
 				3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */,
 			);
 			name = "Comment Table View Cell";
+			sourceTree = "<group>";
+		};
+		3FA43CD52271ACC500107E87 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3FA43CD62271ACF100107E87 /* NewsManager.h */,
+				3FA43CD72271ACF100107E87 /* NewsManager.m */,
+				3F626BEE2271DECF00A1B9C1 /* UserManager.h */,
+				3F626BEF2271DECF00A1B9C1 /* UserManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		83A01B70F0DAFF056FE04149 /* Pods */ = {
@@ -385,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F626BF02271DECF00A1B9C1 /* UserManager.m in Sources */,
 				2DEF63A621E4E6B200E8243C /* ViewController.m in Sources */,
 				2DEF63A321E4E6B200E8243C /* AppDelegate.m in Sources */,
 				3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */,
@@ -393,6 +417,8 @@
 				3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */,
 				3F01CAC82270527000FF6012 /* User.m in Sources */,
 				3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */,
+				3FA43CD82271ACF100107E87 /* NewsManager.m in Sources */,
+				3F68AFA4227835B3006A93F3 /* GetRegistred.m in Sources */,
 				3FECC9D42267307F003921DF /* TreciViewController.m in Sources */,
 				2DEF63A021E4E6B200E8243C /* main.m in Sources */,
 				2DEF63AC21E4E6B200E8243C /* peoj.xcdatamodeld in Sources */,

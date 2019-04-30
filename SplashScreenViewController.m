@@ -12,7 +12,7 @@
 #import "AFNetworking.h"
 #import "Comments.h"
 #import "User.h"
-
+#import "NewsManager.h"
 
 @interface SplashScreenViewController ()
 
@@ -23,7 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
- 
+    [[NewsManager sharedManager]initManager];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finishedLoading" object:nil];
+    
     
     // Do any additional setup after loading the view.
     
@@ -31,6 +34,16 @@
     
     //Ovo mi je prikazivalo gresku:AppDelegate *applicationDelegate = [[UIApplication sharedApplication] delegate] sada  ovako ne prikazuje tu gresku:
     
+    
+    
+   }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)next: (NSNotification *)notification  {
     
     AppDelegate *applicationDelegate;
     applicationDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -41,13 +54,7 @@
     //pozivamo funkciju app delegate koja ce da prikaze nas pocetni ekran
     //ako ti se ne prikaze ova funkcija, moras je dodati u .h fajl
     [applicationDelegate openAppHome];
-   }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 

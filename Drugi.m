@@ -11,6 +11,8 @@
 #import "AFNetworking.h"
 #import "Comments.h"
 #import "User.h"
+#import "GetRegistred.h"
+#import "UserManager.h"
 
 @interface Drugi ()
 
@@ -19,25 +21,24 @@
 @implementation Drugi {
     NSString *email, *password;
     BOOL rememberMe;
-    NSMutableArray *commentsArray;
-    
     User *user;
-    //NSArray *users;
+   
 }
 
-@synthesize labela1, labela2,text1,text2,UIimage, emailTop,users;
+@synthesize labela1, labela2,text1,text2,UIimage, emailTop,users,scrollViewBottom,scrollView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Ovo je drugi view controller");
     
-    commentsArray=[NSMutableArray new];
-    user=[User new];
-    users=[[NSMutableArray alloc]init];
+    scrollView.delegate=self;
     
-    [self getData];
-    
+    //user=[User new];
+    //users=[[NSMutableArray alloc]init];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     rememberMe=[self rememberMe];
     
@@ -51,20 +52,25 @@
         _labela3.textColor=[UIColor blackColor];
         UIimage.image = [UIImage imageNamed: @"check_active"];
         
-    }
+        user.email=text1.text;
+        user.password=text2.text;
+        
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
+        cartController.user = user;
+        
+        //[self.navigationController pushViewController:cartController animated:YES];
+            }
 
     text1.delegate = self;
-    
-    [text1 addTarget:self action:@selector( textFieldDidChange:)
-    forControlEvents:UIControlEventEditingChanged];
-    
+    //[text1 addTarget:self action:@selector( textFieldDidChange:)
+    //forControlEvents:UIControlEventEditingChanged];
     text2.delegate = self;
+    //[text2 addTarget:self action:@selector (textFieldDidChange:)
+    //forControlEvents:UIControlEventEditingChanged];
     
-    [text2 addTarget:self action:@selector (textFieldDidChange:)
-    forControlEvents:UIControlEventEditingChanged];
-    
-    email=@"tekst";
-    password=@"teks";
+   // email=@"tekst";
+   //password=@"teks";
     
     text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
     
@@ -80,12 +86,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)textFieldDidChange:(UITextField *)textField {
+/*-(void)textFieldDidChange:(UITextField *)textField {
     if(textField==text1) {
         labela1.text=textField.text;
     } else labela2.text=textField.text;
     
-}
+}*/
 -(BOOL)rememberMe
 {
     NSUserDefaults *def= [NSUserDefaults standardUserDefaults];
@@ -96,33 +102,59 @@
 - (IBAction)action:(id)sender {
     
     User *new=[User new];
-    
     new.email=text1.text;
-    new.password=text2.text;
-    [users addObject:new];
+    new.password=@"";
+    User *temp=[User new];
     
-    if ( [text1.text length]==0 )
+    
+   
+   
+    NSMutableArray *users=[NSMutableArray new];
+    NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+   
+    users=[defaults objectForKey:@"users"];
+    NSUInteger count=[users count];
+    
+   if ( [text1.text length]==0 )
         
         text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-    
-    else if ([text1.text isEqualToString: email ])
-        text1.text=text1.text;
+   /*else if ([text1.text isEqualToString: email ])
+    text1.text=text1.text;
     
     else {
         text1.text=@"";
         text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Incorect" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-    }
-    
+    }*/
     if ( [text2.text length]==0 )
         text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-    else if ([text2.text isEqualToString: password ])
+    
+    for(int i=0;i<count;i++){
+        
+        temp=users[i];
+        if(temp.email==new.email)
+            new.password=temp.password;
+
+    }
+    
+    if(new.password!=text2.text)
+        text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Incorect" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+    
+    if([new.password length]==0){
+        
+        labela1.text=@"GET REGISTRED";
+        text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+        
+        text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+        
+    }
+    /*else if ([text2.text isEqualToString: password ])
         text2.text=text2.text;
     
     else {
         text2.text=@"";
         text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Incorect" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];  }
-    
-    if ([text1.text isEqualToString: email] && [text2.text isEqualToString: password] )
+   // [text1.text isEqualToString: email]
+    if ( [text2.text isEqualToString: password] )
         
     {
        
@@ -133,10 +165,10 @@
         TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
         cartController.user = user;
         
-        cartController.commentsArray=commentsArray;
+      
         [self.navigationController pushViewController:cartController animated:YES];
         
-    }
+    }*/
     
 }
 - (IBAction)RememberMe:(id)sender {
@@ -166,56 +198,50 @@
     
     NSUserDefaults *def= [NSUserDefaults standardUserDefaults];
     [def setBool:rememberMe forKey:@"rememberMe"];
+    
     [def synchronize];
     
 }
--(void)getData
-{
-    NSLog(@"1");
+
+- (IBAction)getRegistredButton:(id)sender {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"https://jsonplaceholder.typicode.com/comments"
-      parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-          NSArray *array = (NSArray *)responseObject;
-          
-          [self parsData:array];
-          
-      } failure:^(NSURLSessionTask *operation, NSError *error) {
-          NSLog(@"Error: %@", error);
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    GetRegistred *cartController = [sb instantiateViewControllerWithIdentifier:@"GetRegistred"];
     
-      }];
+    [self.navigationController pushViewController:cartController animated:YES];
+    
 }
 
--(void)parsData:(NSArray *)array
-{
-    for(NSDictionary *commD in array)
-    {
-        
-        Comments *a=[Comments new];
-        
-        a.body=[commD objectForKey:@"body"];
-        a.email=[commD objectForKey:@"email"];
-        a.name=[commD objectForKey:@"name"];
-        
-        [commentsArray addObject:a];
+
+#pragma mark Keyboard change methods
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    [UIView animateWithDuration:0.3 animations:^{
+        self->scrollViewBottom.constant = 0;
+    }];
+}
+
+- (void)keyboardFrameWillChange:(NSNotification *)notification {
+    
+    CGRect keyboardEndFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] integerValue];
+    
+    [self.view layoutIfNeeded];
+    
+    CGRect keyboardFrameEnd = [self.view convertRect:keyboardEndFrame toView:nil];
+    
+    if (keyboardFrameEnd.size.height > 0) {
+        scrollViewBottom.constant = keyboardFrameEnd.size.height + 20;
+        [scrollView setContentOffset:CGPointMake(0, text2.frame.origin.y)];
         
     }
     
+    
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
-
-/*-(void)printData:(NSArray *)array{
- User *user;
- 
- for(NSDictionary *commD in array)
- {
- user.email=[commD objectForKey:@"email"];
- user.password=[commD objectForKey:@"body"];
- NSLog(@"%@",user.email);
- 
- }
- NSLog(@"Radim");
- }*/
-
 
 @end
 

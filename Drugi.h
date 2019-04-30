@@ -12,13 +12,9 @@
 
 //implements the second viewcontrollers "PassInformation" protocol
 
+@interface Drugi : UIViewController <UITextFieldDelegate,UIScrollViewDelegate> 
 
-
-
-@interface Drugi : UIViewController <UITextFieldDelegate>
-
-
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottom;
 
 @property (strong, nonatomic) IBOutlet UITextField *text1;
 
@@ -34,9 +30,13 @@
 
 @property(strong,nonatomic) NSMutableArray *users;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (IBAction)action:(id)sender;
 
 - (IBAction)RememberMe:(id)sender;
+
+- (IBAction)getRegistredButton:(id)sender;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *emailTop;
 
