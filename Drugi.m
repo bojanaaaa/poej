@@ -100,20 +100,9 @@
     return rememberMe;
 }
 - (IBAction)action:(id)sender {
+
+    User *user;
     
-    User *new=[User new];
-    new.email=text1.text;
-    new.password=@"";
-    User *temp=[User new];
-    
-    
-   
-   
-    NSMutableArray *users=[NSMutableArray new];
-    NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
-   
-    users=[defaults objectForKey:@"users"];
-    NSUInteger count=[users count];
     
    if ( [text1.text length]==0 )
         
@@ -127,26 +116,32 @@
     }*/
     if ( [text2.text length]==0 )
         text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+   
+    if(user=[[UserManager sharedManager]returnUser:text1.text]){
     
-    for(int i=0;i<count;i++){
+    if(user.password==text2.text)
+    {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
+        cartController.user = user;
+        NSLog(@"user %@",user.email);
+        [self.navigationController pushViewController:cartController animated:YES];
+    }
+    else
         
-        temp=users[i];
-        if(temp.email==new.email)
-            new.password=temp.password;
-
+        text2.text=@"";
+        _wrongLabel.text=@"PASSWORD IS INCORECT";
+    }
+    else
+    {
+        
+    _wrongLabel.text=@"GET REGISTRED";
+        
+    text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+    
+    text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
     }
     
-    if(new.password!=text2.text)
-        text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Incorect" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-    
-    if([new.password length]==0){
-        
-        labela1.text=@"GET REGISTRED";
-        text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
-        
-        text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
-        
-    }
     /*else if ([text2.text isEqualToString: password ])
         text2.text=text2.text;
     

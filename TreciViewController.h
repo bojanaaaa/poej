@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
-@property (weak, nonatomic) User *user;
+@property (strong, nonatomic) User *user;
 @property(strong, nonatomic) NSArray *commentsArray;
 @end
 

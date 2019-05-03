@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labela3;
 
 @property (strong, nonatomic) IBOutlet UILabel *labela2;
+@property (strong, nonatomic) IBOutlet UILabel *wrongLabel;
 
 @property(strong,nonatomic) NSMutableArray *users;
 

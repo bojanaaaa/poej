@@ -8,9 +8,16 @@
 
 #import "UserManager.h"
 #import "User.h"
+#import "AppDelegate.h"
 
-@implementation UserManager
+@implementation UserManager{
+    NSManagedObjectContext *context;
+    NSPersistentStoreCoordinator *coordinator;
+    NSUserDefaults *defaults;
+}
+
 @synthesize users;
+
 + (UserManager *)sharedManager {
     static dispatch_once_t pred;
     static UserManager *_sharedManager = nil;
@@ -21,34 +28,70 @@
     return _sharedManager;
 }
 
--(void)initUserManager:(User *)user{
+-(void)initUserManager{
     
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    context = app.managedObjectContext;
+    coordinator = app.persistentStoreCoordinator;
     
-    users=[NSMutableArray new];
-    users=[defaults objectForKey:@"users"];
-    [users addObject:user];
-    
-    [defaults setObject:users forKey:@"users"];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"finished" object:nil];
-    /* [self setUser:user inArray:users];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finishedLoading" object:nil];
-    
-     */
 }
-/*-(void)setUser:(User *)user inArray:(NSMutableArray*)users{
+-(void)setUser:(NSString *)email and:(NSString *)password{
     
-    [users addObject:user];
+    NSManagedObject *object=[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
+    [object setValue:email forKey:@"email"];
+    [object setValue:password forKey:@"password"];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLoading" object:nil];
+    [context save:nil];
+    
+    NSFetchRequest *request=[NSFetchRequest fetchRequestWithEntityName:@"User"];
+    request.returnsObjectsAsFaults=false;
+    
+    NSError *error=nil;
+    NSArray *results= [context executeFetchRequest:request error:&error];
+    
+    for ( User *user in results)
+    {
+        NSLog(@"email %@",user.email);
+    }
+}
+-(BOOL)checkForEmail:(NSString*)email{
+
+    NSFetchRequest *request=[NSFetchRequest fetchRequestWithEntityName:@"User"];
+    request.returnsObjectsAsFaults=false;
+    
+    NSPredicate *predicate= [NSPredicate predicateWithFormat:@"email == %@",email];
+    [request setPredicate:predicate];
+    
+    NSError *error=nil;
+    NSArray *results= [context executeFetchRequest:request error:&error];
+    
+    NSLog(@"%li", (long)[results count]);
+    if([results count]==0)
+        return false;
+    
+        return true;
+    
 }
 
--(void)next:(NSMutableArray*)users{
+-(User *)returnUser:(NSString*)email{
     
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:users forKey:@"users"];
+    NSFetchRequest *request=[NSFetchRequest fetchRequestWithEntityName:@"User"];
+    request.returnsObjectsAsFaults=false;
     
+    NSPredicate *predicate= [NSPredicate predicateWithFormat:@"email == %@",email];
+    [request setPredicate:predicate];
+    
+    NSError *error=nil;
+    NSArray *results= [context executeFetchRequest:request error:&error];
+    
+    User *user=[results firstObject];
+
+    return user;
+    
+}
+
+
+/*-(void)next:(NSMutableArray*)users{
+ 
 }*/
 @end

@@ -10,4 +10,6 @@
 
 @implementation User
 
+@dynamic email,password;
+
 @end

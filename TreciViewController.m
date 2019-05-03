@@ -28,6 +28,7 @@
     tableView.dataSource=self;
   
     nameLabel.text=user.email;
+    NSLog(@"user %@",user.email);
     
     commentsArray=[NewsManager sharedManager].commentsArray;
     

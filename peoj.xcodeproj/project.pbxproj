@@ -126,6 +126,8 @@
 			children = (
 				3FECC9D22267307F003921DF /* TreciViewController.h */,
 				3FECC9D32267307F003921DF /* TreciViewController.m */,
+				3F68AFA2227835B3006A93F3 /* GetRegistred.h */,
+				3F68AFA3227835B3006A93F3 /* GetRegistred.m */,
 				2D5B51692236AAB4008EC797 /* Drugi.h */,
 				3F64E89A2269F86100A89DF4 /* Drugi.m */,
 				3FBB4282226DAA58000D4791 /* Cetvrti.m */,
@@ -162,8 +164,6 @@
 				2DEF63A521E4E6B200E8243C /* ViewController.m */,
 				3F01CAC22270516F00FF6012 /* some */,
 				2DEF63A721E4E6B200E8243C /* Main.storyboard */,
-				3F68AFA2227835B3006A93F3 /* GetRegistred.h */,
-				3F68AFA3227835B3006A93F3 /* GetRegistred.m */,
 				2DEF63AD21E4E6B200E8243C /* Assets.xcassets */,
 				2DEF63AF21E4E6B200E8243C /* LaunchScreen.storyboard */,
 				2DEF63B221E4E6B200E8243C /* Info.plist */,

@@ -13,6 +13,7 @@
 #import "Comments.h"
 #import "User.h"
 #import "NewsManager.h"
+#import "UserManager.h"
 
 @interface SplashScreenViewController ()
 
@@ -24,10 +25,11 @@
     [super viewDidLoad];
     
     [[NewsManager sharedManager]initManager];
+    [[UserManager sharedManager]initUserManager];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finishedLoading" object:nil];
     
-    
+
     // Do any additional setup after loading the view.
     
     //instanciramo app delegate, da mozem oda pristupimo njegovim funkcijama

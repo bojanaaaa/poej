@@ -59,6 +59,19 @@
         emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
         
     }
+    else {
+        NSLog(@"exists %i",[[UserManager sharedManager]checkForEmail:emailTextField.text]);
+        if([[UserManager sharedManager]checkForEmail:emailTextField.text])
+            
+        {   emailTextField.text=@"";
+            emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail already exists!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            
+            passwordTextFiled.text=@"";
+            passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            return;
+        }
+        
+    }
     
     if ([passwordTextFiled.text length]==0){
         
@@ -66,12 +79,10 @@
         
     }
     else{
-        
-        int pom=0;
-        User *user=[User new];
+        /*User *user=[User new];
         user.email=emailTextField.text;
         user.password=passwordTextFiled.text;
-        
+        NSLog(@"%@",user.email);
         NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
         users=[defaults objectForKey:@"users"];
         NSUInteger count=[users count];
@@ -86,9 +97,13 @@
             }
                 
         }
-    if(pom==0)
-    [[UserManager sharedManager]initUserManager:user];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finished" object:nil];
+    if(pom==0)*/
+   
+    [[UserManager sharedManager]setUser:emailTextField.text and:passwordTextFiled.text];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
+        [self.navigationController pushViewController:cartController animated:YES];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finished" object:nil];
     }
     
     
@@ -144,4 +159,8 @@
         [self.view layoutIfNeeded];
     }];
 }
+
+
+
 @end
+

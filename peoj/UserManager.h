@@ -14,8 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (UserManager *)sharedManager;
 
 @property(strong,nonatomic) NSMutableArray *users;
--(void)initUserManager:(User *)user;
-
+-(void)initUserManager;
+-(void)setUser:(NSString *)email and:(NSString *)password;
+-(BOOL)checkForEmail:(NSString*)email;
+-(User *)returnUser:(NSString*)email;
 @end
 
 NS_ASSUME_NONNULL_END
