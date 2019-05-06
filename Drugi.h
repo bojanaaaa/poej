@@ -29,6 +29,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *labela2;
 @property (strong, nonatomic) IBOutlet UILabel *wrongLabel;
 
+
+
+
 @property(strong,nonatomic) NSMutableArray *users;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

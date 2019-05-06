@@ -20,7 +20,7 @@
     NSMutableArray *users;
 }
 
-@synthesize emailTextField, passwordTextFiled, newsAppLabel,scrollView,scrollViewBottom;
+@synthesize emailTextField, passwordTextFiled, newsAppLabel,scrollView,scrollViewBottom,wrongLabel2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,6 +52,21 @@
 }
 */
 
+- (IBAction)emailDidBeginEditing:(id)sender {
+    emailTextField.placeholder=nil;
+}
+- (IBAction)emailDidEndEditing:(id)sender {
+     emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+}
+- (IBAction)passwordDidBeginEditing:(id)sender {
+    passwordTextFiled.placeholder=nil;
+}
+- (IBAction)passwordDidEndEditing:(id)sender {
+    passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+    
+}
+
+
 - (IBAction)registerButton:(id)sender {
     
     if([emailTextField.text length]==0){
@@ -64,10 +79,10 @@
         if([[UserManager sharedManager]checkForEmail:emailTextField.text])
             
         {   emailTextField.text=@"";
-            emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail already exists!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-            
+            emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+            wrongLabel2.text=@"E-mail already exists!";
             passwordTextFiled.text=@"";
-            passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
             return;
         }
         
@@ -119,12 +134,10 @@
 
 - (IBAction)logInButton:(id)sender {
     
+   
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
-    
-    
-    
     [self.navigationController pushViewController:cartController animated:YES];
     
 }

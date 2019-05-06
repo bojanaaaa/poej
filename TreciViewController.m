@@ -100,4 +100,16 @@
     
 }
 
+
+- (IBAction)logOut:(id)sender {
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
+
+    BOOL rememberMe=NO;
+    NSUserDefaults *def= [NSUserDefaults standardUserDefaults];
+    [def setBool:rememberMe forKey:@"rememberMe"];
+    
+    [self.navigationController pushViewController:cartController animated:YES];
+}
 @end

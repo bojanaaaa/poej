@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewBottom;
 
+@property (strong, nonatomic) IBOutlet UILabel *wrongLabel2;
+
+
+
+
 - (IBAction)registerButton:(id)sender;
 
 

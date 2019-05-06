@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)logOut:(id)sender;
+
 
 @property (strong, nonatomic) User *user;
 @property(strong, nonatomic) NSArray *commentsArray;

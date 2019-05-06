@@ -63,11 +63,12 @@
             }
 
     text1.delegate = self;
-    //[text1 addTarget:self action:@selector( textFieldDidChange:)
-    //forControlEvents:UIControlEventEditingChanged];
+    [text1 addTarget:self action:@selector( textFieldDidStartEditing:)
+    forControlEvents:UIControlEventEditingChanged];
+    
     text2.delegate = self;
-    //[text2 addTarget:self action:@selector (textFieldDidChange:)
-    //forControlEvents:UIControlEventEditingChanged];
+    [text2 addTarget:self action:@selector (passwordTextFieldDidStartEditing:)
+    forControlEvents:UIControlEventEditingChanged];
     
    // email=@"tekst";
    //password=@"teks";
@@ -86,12 +87,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//TEXT FIELDS.......................................
+- (IBAction)textFieldDidStartEditing:(id)sender {
+    
+    text1.placeholder=nil;
+}
+- (IBAction)emailEditingDidEnd:(id)sender {
+    
+    text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+}
+- (IBAction)passwordTextFieldDidStartEditing:(id)sender {
+    
+    text2.placeholder=nil;
+}
+- (IBAction)passwordEditingEnd:(id)sender {
+     text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
+}
+
 /*-(void)textFieldDidChange:(UITextField *)textField {
-    if(textField==text1) {
-        labela1.text=textField.text;
-    } else labela2.text=textField.text;
+   
+    textField.placeholder=nil;
     
 }*/
+
+
+//....................................................
 -(BOOL)rememberMe
 {
     NSUserDefaults *def= [NSUserDefaults standardUserDefaults];
@@ -117,7 +137,7 @@
     if ( [text2.text length]==0 )
         text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
    
-    if(user=[[UserManager sharedManager]returnUser:text1.text]){
+    if((user=[[UserManager sharedManager]returnUser:text1.text])){
     
     if(user.password==text2.text)
     {
@@ -125,12 +145,15 @@
         TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
         cartController.user = user;
         NSLog(@"user %@",user.email);
+        text2.text=@"";
+        text1.text=@"";
+        
         [self.navigationController pushViewController:cartController animated:YES];
     }
     else
         
-        text2.text=@"";
-        _wrongLabel.text=@"PASSWORD IS INCORECT";
+
+        _wrongLabel.text=@"Password is incorect!";
     }
     else
     {
@@ -195,6 +218,8 @@
     [def setBool:rememberMe forKey:@"rememberMe"];
     
     [def synchronize];
+    
+    
     
 }
 
