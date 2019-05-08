@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *wrongLabel2;
 
 
+@property (strong, nonatomic) IBOutlet UITextField *passwordConfirmation;
+
 
 
 - (IBAction)registerButton:(id)sender;

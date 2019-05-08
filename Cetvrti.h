@@ -8,14 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Comments.h"
+#import "NavigationBar.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Cetvrti : UIViewController
+@interface Cetvrti : UIViewController <NavigationBarDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *email2;
 @property (weak, nonatomic) IBOutlet UILabel *body;
 
-- (IBAction)backButton2:(id)sender;
+@property (strong, nonatomic) IBOutlet NavigationBar *navigationBar;
+
+@property (strong, nonatomic) IBOutlet UIImageView *uiImage;
+
+- (IBAction)dothat:(id)sender;
+
+//-(UIImage*)getData;
 @property (strong, nonatomic) Comments *data;
 @end
 

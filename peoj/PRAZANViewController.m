@@ -1,24 +1,37 @@
 //
-//  ViewController.m
+//  PRAZANViewController.m
 //  peoj
 //
 //  Created by Bojana Sladojevic on 08/05/2019.
 //  Copyright © 2019 crazy. All rights reserved.
 //
 
-#import "ViewController.h"
-
-@interface ViewController ()
+#import "PRAZANViewController.h"
+#import "NavigationBar.h"
+@interface PRAZANViewController ()
 
 @end
 
-@implementation ViewController
+@implementation PRAZANViewController
+@synthesize navigationBar;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    navigationBar.delegate=self;
+    [self returnnothing];
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    
+    navigationBar.beckButton.hidden=NO;
+    
+    navigationBar.logOutButton.hidden=YES;
+    
+}
+- (void)backButtonDelegate:(id)sender{
+    
+     [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 

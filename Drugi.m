@@ -40,27 +40,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
-    rememberMe=[self rememberMe];
-    
-    if (rememberMe)
-    {
-    
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        text1.text = [defaults objectForKey:@"username"];
-        text2.text = [defaults objectForKey:@"password"];
-        
-        _labela3.textColor=[UIColor blackColor];
-        UIimage.image = [UIImage imageNamed: @"check_active"];
-        
-        user.email=text1.text;
-        user.password=text2.text;
-        
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
-        cartController.user = user;
-        
-        //[self.navigationController pushViewController:cartController animated:YES];
-            }
 
     text1.delegate = self;
     [text1 addTarget:self action:@selector( textFieldDidStartEditing:)
@@ -81,6 +60,37 @@
     {
         emailTop.constant=10;
     }
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+   
+    rememberMe=[self rememberMe];
+    
+    if (rememberMe)
+    {
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        text1.text = [defaults objectForKey:@"username"];
+        text2.text = [defaults objectForKey:@"password"];
+        
+        _labela3.textColor=[UIColor blackColor];
+        UIimage.image = [UIImage imageNamed: @"check_active"];
+        
+        user.email=text1.text;
+        user.password=text2.text;
+        
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        TreciViewController *cartController = [sb instantiateViewControllerWithIdentifier:@"TreciViewController"];
+        cartController.user = user;
+        
+        //[self.navigationController pushViewController:cartController animated:YES];
+    }
+    else {
+        
+        _labela3.textColor=[UIColor grayColor];
+        UIimage.image = [UIImage imageNamed: @"check_unactive"];
+    }
+        
     
 }
 - (void)didReceiveMemoryWarning {
@@ -127,13 +137,7 @@
    if ( [text1.text length]==0 )
         
         text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-   /*else if ([text1.text isEqualToString: email ])
-    text1.text=text1.text;
-    
-    else {
-        text1.text=@"";
-        text1.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Incorect" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
-    }*/
+
     if ( [text2.text length]==0 )
         text2.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
    

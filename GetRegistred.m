@@ -18,21 +18,26 @@
 
 @implementation GetRegistred{
     NSMutableArray *users;
+    NSString *temp;
 }
 
-@synthesize emailTextField, passwordTextFiled, newsAppLabel,scrollView,scrollViewBottom,wrongLabel2;
+@synthesize emailTextField, passwordTextFiled, newsAppLabel,scrollView,scrollViewBottom,wrongLabel2,passwordConfirmation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
    
+    
+    
     emailTextField.delegate=self;
     passwordTextFiled.delegate=self;
+    passwordConfirmation.delegate=self;
     
     emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
     
     passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
     
+     passwordConfirmation.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Confirm password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
    
     scrollView.delegate=self;
     
@@ -53,7 +58,7 @@
 */
 
 - (IBAction)emailDidBeginEditing:(id)sender {
-    emailTextField.placeholder=nil;
+    emailTextField.text=temp;
 }
 - (IBAction)emailDidEndEditing:(id)sender {
      emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
@@ -78,9 +83,12 @@
         NSLog(@"exists %i",[[UserManager sharedManager]checkForEmail:emailTextField.text]);
         if([[UserManager sharedManager]checkForEmail:emailTextField.text])
             
-        {   emailTextField.text=@"";
-            emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
-            wrongLabel2.text=@"E-mail already exists!";
+        {
+            temp=[NSString new];
+            temp=emailTextField.text;
+            emailTextField.text=@"";
+            emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"E-mail already exists!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            
             passwordTextFiled.text=@"";
             passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor blueColor]}];
             return;
@@ -88,12 +96,21 @@
         
     }
     
+    
     if ([passwordTextFiled.text length]==0){
         
         passwordTextFiled.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Password is reqired!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
         
     }
-    else{
+    
+    else if([passwordConfirmation.text isEqualToString:passwordTextFiled.text])
+    {
+        [[UserManager sharedManager]setUser:emailTextField.text and:passwordTextFiled.text];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
+        [self.navigationController pushViewController:cartController animated:YES];
+    }
+    else {
         /*User *user=[User new];
         user.email=emailTextField.text;
         user.password=passwordTextFiled.text;
@@ -113,11 +130,9 @@
                 
         }
     if(pom==0)*/
-   
-    [[UserManager sharedManager]setUser:emailTextField.text and:passwordTextFiled.text];
-        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
-        [self.navigationController pushViewController:cartController animated:YES];
+        passwordConfirmation.text=@"";
+    passwordConfirmation.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Not matching!" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+    
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(next:) name:@"finished" object:nil];
     }
     
@@ -133,8 +148,6 @@
 }
 
 - (IBAction)logInButton:(id)sender {
-    
-   
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     Drugi *cartController = [sb instantiateViewControllerWithIdentifier:@"Drugi"];
@@ -165,8 +178,6 @@
         [scrollView setContentOffset:CGPointMake(0, passwordTextFiled.frame.origin.y)];
         
     }
-    
-    
     
     [UIView animateWithDuration:animationDuration animations:^{
         [self.view layoutIfNeeded];

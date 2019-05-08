@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PRAZANViewController.h
 //  peoj
 //
 //  Created by Bojana Sladojevic on 08/05/2019.
@@ -7,10 +7,12 @@
 //
 
 #import "BaseViewController.h"
-
+#import "NavigationBar.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ViewController : UIViewController
+@interface PRAZANViewController : BaseViewController <NavigationBarDelegate>
+
+@property (strong, nonatomic) IBOutlet NavigationBar *navigationBar;
 
 @end
 

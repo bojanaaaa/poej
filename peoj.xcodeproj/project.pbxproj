@@ -18,6 +18,9 @@
 		2DEF63BC21E4E6B200E8243C /* peojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63BB21E4E6B200E8243C /* peojTests.m */; };
 		2DEF63C721E4E6B200E8243C /* peojUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF63C621E4E6B200E8243C /* peojUITests.m */; };
 		3F01CAC82270527000FF6012 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F01CAC72270527000FF6012 /* User.m */; };
+		3F05A30722817E7A0098E80D /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F05A30622817E7A0098E80D /* NavigationBar.m */; };
+		3F05A30922817E8A0098E80D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F05A30822817E8A0098E80D /* View.xib */; };
+		3F05A30E2281956B0098E80D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F05A30D2281956B0098E80D /* BaseViewController.m */; };
 		3F626BF02271DECF00A1B9C1 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F626BEF2271DECF00A1B9C1 /* UserManager.m */; };
 		3F64E89B2269F86100A89DF4 /* Drugi.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F64E89A2269F86100A89DF4 /* Drugi.m */; };
 		3F68AFA4227835B3006A93F3 /* GetRegistred.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68AFA3227835B3006A93F3 /* GetRegistred.m */; };
@@ -25,6 +28,7 @@
 		3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */; };
 		3FA43CD82271ACF100107E87 /* NewsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA43CD72271ACF100107E87 /* NewsManager.m */; };
 		3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB4282226DAA58000D4791 /* Cetvrti.m */; };
+		3FE090AB2282DBE400F3B0D7 /* PRAZANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE090AA2282DBE400F3B0D7 /* PRAZANViewController.m */; };
 		3FECC9D42267307F003921DF /* TreciViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC9D32267307F003921DF /* TreciViewController.m */; };
 		3FFD5E5D226893F4004AC002 /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFD5E5C226893F4004AC002 /* Comments.m */; };
 		919BF6099B1BB7EF8A1EE1F5 /* libPods-peoj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845DCEB45F824BC6D586AED /* libPods-peoj.a */; };
@@ -72,6 +76,11 @@
 		2DEF63C821E4E6B200E8243C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F01CAC62270527000FF6012 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3F01CAC72270527000FF6012 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3F05A30522817E7A0098E80D /* NavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
+		3F05A30622817E7A0098E80D /* NavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
+		3F05A30822817E8A0098E80D /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		3F05A30C2281956B0098E80D /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3F05A30D2281956B0098E80D /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3F626BEE2271DECF00A1B9C1 /* UserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		3F626BEF2271DECF00A1B9C1 /* UserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		3F64E89A2269F86100A89DF4 /* Drugi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drugi.m; sourceTree = "<group>"; };
@@ -86,6 +95,8 @@
 		3FAD6DD72268710C00C21C14 /* Konstante.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Konstante.h; sourceTree = "<group>"; };
 		3FBB4281226DAA58000D4791 /* Cetvrti.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cetvrti.h; sourceTree = "<group>"; };
 		3FBB4282226DAA58000D4791 /* Cetvrti.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cetvrti.m; sourceTree = "<group>"; };
+		3FE090A92282DBE400F3B0D7 /* PRAZANViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRAZANViewController.h; sourceTree = "<group>"; };
+		3FE090AA2282DBE400F3B0D7 /* PRAZANViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRAZANViewController.m; sourceTree = "<group>"; };
 		3FECC9D22267307F003921DF /* TreciViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreciViewController.h; sourceTree = "<group>"; };
 		3FECC9D32267307F003921DF /* TreciViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreciViewController.m; sourceTree = "<group>"; };
 		3FFD5E5B226893F4004AC002 /* Comments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Comments.h; sourceTree = "<group>"; };
@@ -157,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA43CD52271ACC500107E87 /* Managers */,
+				3F05A30422817D690098E80D /* Navigation Bar */,
 				3F6C8C2E226F173500C5239C /* Comment Table View Cell */,
 				2DEF63A121E4E6B200E8243C /* AppDelegate.h */,
 				2DEF63A221E4E6B200E8243C /* AppDelegate.m */,
@@ -212,12 +224,26 @@
 			name = some;
 			sourceTree = "<group>";
 		};
+		3F05A30422817D690098E80D /* Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				3F05A30522817E7A0098E80D /* NavigationBar.h */,
+				3F05A30622817E7A0098E80D /* NavigationBar.m */,
+				3F05A30822817E8A0098E80D /* View.xib */,
+			);
+			name = "Navigation Bar";
+			sourceTree = "<group>";
+		};
 		3F6C8C2E226F173500C5239C /* Comment Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
-				3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */,
 				3F6C8C30226F177200C5239C /* CommentTableViewCell.m */,
 				3F6C8C31226F177200C5239C /* CommentTableViewCell.xib */,
+				3F6C8C2F226F177200C5239C /* CommentTableViewCell.h */,
+				3F05A30C2281956B0098E80D /* BaseViewController.h */,
+				3F05A30D2281956B0098E80D /* BaseViewController.m */,
+				3FE090A92282DBE400F3B0D7 /* PRAZANViewController.h */,
+				3FE090AA2282DBE400F3B0D7 /* PRAZANViewController.m */,
 			);
 			name = "Comment Table View Cell";
 			sourceTree = "<group>";
@@ -360,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DEF63B121E4E6B200E8243C /* LaunchScreen.storyboard in Resources */,
+				3F05A30922817E8A0098E80D /* View.xib in Resources */,
 				2DEF63AE21E4E6B200E8243C /* Assets.xcassets in Resources */,
 				2DEF63A921E4E6B200E8243C /* Main.storyboard in Resources */,
 				3F6C8C33226F177200C5239C /* CommentTableViewCell.xib in Resources */,
@@ -415,8 +442,11 @@
 				2D5B516222171A3A008EC797 /* SplashScreenViewController.m in Sources */,
 				3FFD5E5D226893F4004AC002 /* Comments.m in Sources */,
 				3FBB4283226DAA58000D4791 /* Cetvrti.m in Sources */,
+				3F05A30722817E7A0098E80D /* NavigationBar.m in Sources */,
 				3F01CAC82270527000FF6012 /* User.m in Sources */,
+				3F05A30E2281956B0098E80D /* BaseViewController.m in Sources */,
 				3F6C8C32226F177200C5239C /* CommentTableViewCell.m in Sources */,
+				3FE090AB2282DBE400F3B0D7 /* PRAZANViewController.m in Sources */,
 				3FA43CD82271ACF100107E87 /* NewsManager.m in Sources */,
 				3F68AFA4227835B3006A93F3 /* GetRegistred.m in Sources */,
 				3FECC9D42267307F003921DF /* TreciViewController.m in Sources */,

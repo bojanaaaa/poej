@@ -1,24 +1,26 @@
 //
-//  ViewController.m
+//  BaseViewController.m
 //  peoj
 //
-//  Created by Bojana Sladojevic on 08/05/2019.
+//  Created by Bojana Sladojevic on 07/05/2019.
 //  Copyright © 2019 crazy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BaseViewController.h"
 
-@interface ViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+- (void)returnnothing{
+    NSLog(@"string funkcije sa base controllera");
+}
 /*
 #pragma mark - Navigation
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationBar">
+            <connections>
+                <outlet property="beckButton" destination="RKe-2y-iAt" id="0n3-Q6-yNW"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="pj1-MX-gNW"/>
+                <outlet property="logOutButton" destination="JHl-9e-1av" id="cWG-CO-yb6"/>
+                <outlet property="nameLabel" destination="Zka-Yx-5sO" id="ete-4d-g8P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1563" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zka-Yx-5sO">
+                    <rect key="frame" x="120" y="16" width="1423" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHl-9e-1av">
+                    <rect key="frame" x="10" y="0.0" width="100" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="KHa-06-7wh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="LOG OUT"/>
+                    <connections>
+                        <action selector="logOutButton:" destination="-1" eventType="touchUpInside" id="aD1-bH-T9d"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKe-2y-iAt">
+                    <rect key="frame" x="10" y="0.0" width="100" height="58"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="&lt;"/>
+                    <connections>
+                        <action selector="backButton:" destination="-1" eventType="touchUpInside" id="Gti-6K-FNM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RKe-2y-iAt" firstAttribute="width" secondItem="JHl-9e-1av" secondAttribute="width" id="0Mw-yX-mGl"/>
+                <constraint firstItem="RKe-2y-iAt" firstAttribute="centerY" secondItem="JHl-9e-1av" secondAttribute="centerY" id="92C-a6-kRY"/>
+                <constraint firstItem="JHl-9e-1av" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Atx-RT-7Ah"/>
+                <constraint firstAttribute="trailing" secondItem="Zka-Yx-5sO" secondAttribute="trailing" constant="20" id="KXf-KY-c4j"/>
+                <constraint firstItem="Zka-Yx-5sO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Kf3-09-k9w"/>
+                <constraint firstItem="JHl-9e-1av" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="OVz-Q1-qNv"/>
+                <constraint firstItem="Zka-Yx-5sO" firstAttribute="leading" secondItem="JHl-9e-1av" secondAttribute="trailing" constant="10" id="dr2-lH-2Yw"/>
+                <constraint firstItem="RKe-2y-iAt" firstAttribute="height" secondItem="JHl-9e-1av" secondAttribute="height" id="iOW-Yi-oDG"/>
+                <constraint firstItem="RKe-2y-iAt" firstAttribute="centerX" secondItem="JHl-9e-1av" secondAttribute="centerX" id="soQ-aU-XoQ"/>
+                <constraint firstItem="JHl-9e-1av" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="vKU-PX-bUZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="857.24637681159425" y="-454.01785714285711"/>
+        </view>
+    </objects>
+</document>

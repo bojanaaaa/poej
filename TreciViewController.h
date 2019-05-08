@@ -9,20 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "Comments.h"
 #import "User.h"
+#import "NavigationBar.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TreciViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface TreciViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,NavigationBarDelegate>
 
--(IBAction)backButton:(id)sender;
 
-- (IBAction)next:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-- (IBAction)logOut:(id)sender;
-
+@property (strong, nonatomic) IBOutlet NavigationBar *navigationBar;
 
 @property (strong, nonatomic) User *user;
 @property(strong, nonatomic) NSArray *commentsArray;
